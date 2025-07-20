@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 白地図は https://japan-map.com/ から取得 -->
+    <meta charset="UTF-8">
+    <title>観光ナビ</title>
+    <style type="text/css">
+        .map_japan {
+            position: relative;
+            height: 400px; /* width と同じでよい */
+            width: 400px; /* height と同じでよい */
+
+            background-image: url("picture/nihonchizu-hakuchizu.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .map_japan ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .map_japan li {
+            position: absolute;
+        }
+
+        .map_gifu {
+            top: 60.7%;
+            left: 41.64%;
+        }
+
+        .map_gifu img {
+            width: 14%;
+        }
+
+        .map_kyoto {
+            top: 64.8%;
+            left: 34.6%;
+        }
+
+        .map_kyoto img {
+            width: 10.6%;
+        }
+
+        .map_miyazaki {
+            top: 81.7%;
+            left: 11.2%;
+        }
+
+        .map_miyazaki img {
+            width: 10.8%;
+        }
+    </style>
+</head>
+<body>
+    <h1>観光ナビへようこそ</h1>
+    
+    <div class="map_japan">
+        <ul>
+            <li class="map_kyoto">
+                <a href="kyoto/index.html">
+                    <img src="picture/kyoto.png" alt="京都府">
+                    <!-- 京都府 -->
+                </a>
+            </li>
+            <li class="map_gifu">
+                <a href="gifu/index.html">
+                    <img src="picture/gifu.png" alt="岐阜県">
+                    <!-- 岐阜県 -->
+                </a>
+            </li>
+            <li class="map_miyazaki">
+                <a href="miyazaki/index.html">
+                    <img src="picture/miyazaki.png" alt="宮崎県">
+                    <!-- 宮崎県 -->
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
