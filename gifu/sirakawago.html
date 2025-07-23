@@ -1,82 +1,78 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sample</title>
-    <link rel="stylesheet" href="css_gifu.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>白川郷 | 観光ナビ</title>
+  <link rel="stylesheet" type="text/css" href="../common/general.css">
+  <link rel="stylesheet" type="text/css" href="../common/hamburger.css">
+  <link rel="stylesheet" type="text/css" href="../common/article.css">
 </head>
 <body>
 <header>
-  <button class="hamburger-menu" id="hamburger-menu" style="z-index: 101; margin-left:0.5em; margin-right:1em;">
+  <button id="hamburger-menu">
     <span class="hamburger-menu__line"></span>
     <span class="hamburger-menu__line"></span>
     <span class="hamburger-menu__line"></span>
   </button>
-  <div class="header-title-area">
-    <img src="images/guidebar0123.png" class="header-logo-img" alt="ガイドバー">
+  <div class="header-title">
+    <img src="image/guidebar0123.png" alt="ガイドバー">
   </div>
 </header>
-<nav class="navigation-menu" id="navigation-menu">
+<nav id="navigation-menu">
   <ul>
     <li><a href="../index.html">トップ</a></li>
     <li><a href="../kyoto/index.html">京都府</a></li>
     <li><a href="../miyazaki/index.html">宮崎県</a></li>
-    <li><a href="../gifu/index_gifu.html">岐阜県</a></li>
+    <li><a href="../gifu/index.html">岐阜県</a></li>
   </ul>
 </nav>
-<div class="overlay" id="overlay"></div>
+<div id="overlay"></div>
 <article>
-  <section>
-    <div>
-      <section>
-        <div class="heritage-title">
-            <img src="images/gasyou.jpg" class="heritage-title-icon" alt="合掌造り背景" />
-          <span class="heritage-title-text">世界遺産:白川郷</span>
-        </div>
-        <center>
-            <figure>
-              <img src="images/sirakawagou2324.jpg" alt="白川郷" width="800" style="max-width: 100%;">
-            </figure>
-        </center>
-            <p>白川郷の荻町地区は合掌造りの集落で知られる。独特の景観をなす集落が評価され、1976年重要伝統的建造物群保存地区として選定、1995年には五箇山（相倉地区、菅沼地区）と共に白川郷・五箇山の合掌造り集落として、ユネスコの世界遺産（文化遺産）に登録された。</p>
-            <p>白川郷の荻町地区は、今も実生活の場として使われているところに価値があり、それが他地域の合掌民家集落と違うところである。「世界遺産白川郷合掌造り保存財団」などがその保存にあたっている。毎年1月と2月頃の週末には夜間ライトアップが行われる。</p>
-            <h3 class="headline-box">
-              <span class="headline-bar"></span>
-              <span class="headline-text">基本情報</span>
-            </h3>
-            <p>住所: 岐阜県大野郡白川村荻町</p>
-            <p>アクセス: 車：「白川郷IC」で約5分/バス：高速バス「白川郷バスターミナル」下車すぐ</p>
-            <p>営業時間: 24時間(ただし駐車場: 8:00～17:00)</p>
-            <p>駐車場料金:</p>
-            <table border="1">
-                <tr>
-                    <th></th>
-                    <th>大型車・マイクロバス</th>
-                    <th>普通車・軽自動車</th>
-                    <th>2輪車・原付
-                    </th>
-                </tr>
-                <tr>
-                    <td>改定前</td>
-                    <td>3000円</td>
-                    <td>1000円</td>
-                    <td>200円</td>
-                </tr>
-                <tr>
-                    <td>改定後</td>
-                    <td>10000円</td>
-                    <td>2000円</td>
-                    <td>500円</td>
-                </tr>
-            </table>
-            <p>※2025年10月1日より改定料金となります。</p>
-            <p>公式サイト: <a href="https://shirakawa-go.gr.jp/">https://shirakawa-go.gr.jp/</a></p>
-      </section>
-    </div>
-  </section>
+  <div class="title">
+    <img src="image/gasyou.jpg" class="icon" alt="合掌造り背景">
+    <span class="text">世界遺産:白川郷</span>
+  </div>
+  <center>
+    <figure>
+      <img src="image/sirakawagou2324.jpg" alt="白川郷" width="800">
+    </figure>
+  </center>
+  <p>白川郷の荻町地区は合掌造りの集落で知られる。独特の景観をなす集落が評価され、1976年重要伝統的建造物群保存地区として選定、1995年には五箇山（相倉地区、菅沼地区）と共に白川郷・五箇山の合掌造り集落として、ユネスコの世界遺産（文化遺産）に登録された。</p>
+  <p>白川郷の荻町地区は、今も実生活の場として使われているところに価値があり、それが他地域の合掌民家集落と違うところである。「世界遺産白川郷合掌造り保存財団」などがその保存にあたっている。毎年1月と2月頃の週末には夜間ライトアップが行われる。</p>
+  <h3 class="headline-box">
+    <span class="headline-bar"></span>
+    <span class="headline-text">基本情報</span>
+  </h3>
+  <p>住所: 岐阜県大野郡白川村荻町</p>
+  <p>アクセス: 車：「白川郷IC」で約5分/バス：高速バス「白川郷バスターミナル」下車すぐ</p>
+  <p>営業時間: 24時間(ただし駐車場: 8:00～17:00)</p>
+  <p>駐車場料金:</p>
+  <table border="1">
+  <tr>
+    <th></th>
+    <th>大型車・マイクロバス</th>
+    <th>普通車・軽自動車</th>
+    <th>2輪車・原付
+    </th>
+  </tr>
+  <tr>
+    <td>改定前</td>
+    <td>3000円</td>
+    <td>1000円</td>
+    <td>200円</td>
+  </tr>
+  <tr>
+    <td>改定後</td>
+    <td>10000円</td>
+    <td>2000円</td>
+    <td>500円</td>
+  </tr>
+  </table>
+  <p>※2025年10月1日より改定料金となります。</p>
+  <p>公式サイト: <a href="https://shirakawa-go.gr.jp/">https://shirakawa-go.gr.jp/</a></p>
 </article>
 <footer><address>Computer Literacy</address></footer>
-<script src="javascript/menu.js"></script>
+<script src="../common/menu.js"></script>
 </body>
 </html>
