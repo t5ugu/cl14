@@ -186,7 +186,7 @@ address {
 }
 
 /* ハンバーガーメニューのボタン */
-.hamburger-menu {
+#hamburger-menu {
     width: 40px;
     height: 40px;
     border: none;
@@ -215,7 +215,7 @@ address {
 }
 
 /* ナビゲーションメニュー */
-.navigation-menu {
+#navigation-menu {
     position: fixed;
     top: 0;
     right: -280px;
@@ -228,22 +228,22 @@ address {
     z-index: 1000;
 }
 
-.navigation-menu.is-active {
+#navigation-menu.is-active {
     right: 0;
     /* メニューを表示 */
 }
 
-.navigation-menu ul {
+#navigation-menu ul {
     list-style: none;
     padding: 80px 20px 20px;
     margin: 0;
 }
 
-.navigation-menu li {
+#navigation-menu li {
     margin-bottom: 20px;
 }
 
-.navigation-menu a {
+#navigation-menu a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
@@ -252,7 +252,7 @@ address {
 }
 
 /* オーバーレイ */
-.overlay {
+#overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -275,7 +275,7 @@ address {
 }
 
 /* オーバーレイ表示時のスタイル */
-.overlay.is-active {
+#overlay.is-active {
     opacity: 1;
     visibility: visible;
 }
