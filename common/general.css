@@ -1,0 +1,70 @@
+.main {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: "a a" "b c" "b d";
+    grid-template-columns: 8em 1fr;
+    grid-template-rows: 6em 1fr 3em
+}
+
+header {
+    grid-area: a;
+    background: rgb(167, 215, 220);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+
+body {
+    margin: 0px
+}
+
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+aside {
+    grid-area: b;
+    background: rgb(180, 234, 234);
+    padding: 1em
+}
+
+article {
+    grid-area: c;
+    background: rgb(212, 187, 150);
+    padding: 1em
+}
+
+footer {
+    grid-area: d;
+    background: rgb(255, 255, 255);
+    padding: 1em
+}
+
+address {
+    text-align: right
+}
+
+.header-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+}
+
+.header-logo img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: 0.01em;
+}

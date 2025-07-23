@@ -1,0 +1,39 @@
+.title {
+    font-size: 1.5em;
+    align-items: left;
+    font-weight: bold;
+    background: linear-gradient(90deg, #a3d8f4 0%, #d0f0ff 100%);
+    color: #333;
+    padding: 0.3em 0.8em;
+    border-radius: 12px;
+    margin-bottom: 0.7em;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.headline-box {
+    display: flex;
+    align-items: center;
+    background: #e6f7ff;
+    padding: 0.8em 1em;
+    margin: 1.2em 0 1.2em 0;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.headline-bar {
+    display: inline-block;
+    width: 8px;
+    height: 1.5em;
+    background: #1565c0;
+    margin-right: 0.7em;
+    border-radius: 2px;
+}
+
+.headline-text {
+    color: #222;
+    letter-spacing: 0.05em;
+}
