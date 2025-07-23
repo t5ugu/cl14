@@ -3,269 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sample</title>
-    <link rel="stylesheet">
-    <style>
-    body { margin: 0px }
-    .main { display: grid; width: 100vw; height: 100vh;grid-template-areas: "a a" "b c" "b d";grid-template-columns: 8em 1fr;grid-template-rows: 6em 1fr 3em }
-    .logo a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-header { grid-area: a; background: rgb(167, 215, 220); padding: 1em }
-aside { grid-area: b; background: rgb(180, 234, 234); padding: 1em }
-section { grid-area: c; background: rgb(212, 187, 150); padding: 1em }
-footer { grid-area: d; background: rgb(255, 255, 255); padding: 1em }
-address { text-align: right }
-/* ハンバーガーメニューのボタン */
-.hamburger-menu {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    z-index: 1001; /* メニューより手前に表示 */
-    position: relative; /* 子要素の位置の基準に */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hamburger-menu__line {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-/* ナビゲーションメニュー */
-.navigation-menu {
-    position: fixed;
-    top: 0;
-    right: -280px; /* 初期状態は画面外 */
-    width: 280px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    transition: right 0.4s ease-in-out;
-    z-index: 1000;
-}
-
-.navigation-menu.is-active {
-    right: 0; /* メニューを表示 */
-}
-
-.navigation-menu ul {
-    list-style: none;
-    padding: 80px 20px 20px;
-    margin: 0;
-}
-
-.navigation-menu li {
-    margin-bottom: 20px;
-}
-
-.navigation-menu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    display: block;
-    padding: 10px 0;
-}
-
-/* オーバーレイ */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    visibility: hidden; /* クリックできないように */
-    transition: opacity 0.4s, visibility 0.4s;
-    z-index: 98;
-}
-
-/* --- JavaScriptで切り替えるクラス --- */
-
-/* メニュー表示時のスタイル */
-.navigation-menu.is-active {
-    transform: translateX(0); /* 画面内に表示 */
-}
-
-/* オーバーレイ表示時のスタイル */
-.overlay.is-active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ハンバーガーアイコンを「×」にする */
-.hamburger-menu.is-active .hamburger-menu__line:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-}
-.hamburger-menu.is-active .hamburger-menu__line:nth-child(2) {
-    opacity: 0;
-}
-.hamburger-menu.is-active .hamburger-menu__line:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-}
-      .food-list {
-        display: flex;
-        gap: 2em;
-        justify-content: center;
-        padding: 0;
-      }
-      .food-list li {
-        flex: 1 1 0;
-        list-style: none;
-        text-align: center;
-      }
-      .food-list img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-      .food-list figcaption {
-        margin-top: 0.5em;
-        font-size: 1em;
-        color: #333;
-      }
-      .btn.js_guideModal {
-        display: inline-block;
-        padding: 0.5em 1.5em;
-        border: 2px solid #0d73c6;
-        border-radius: 16px;
-        background: #fff;
-        color: #0d73c6;
-        font-size: 1em;
-        text-decoration: none;
-        transition: background 0.2s, color 0.2s;
-        margin-top: 0.7em;
-        box-sizing: border-box;
-        cursor: pointer;
-      }
-      .btn.js_guideModal:hover {
-        background: #0d73c6;
-        color: #fff;
-      }
-      nav.navigation-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 250px;
-        background: #aad8ad;
-        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 200;
-        padding-top: 80px;
-      }
-      nav.navigation-menu ul {
-        list-style: none;
-        padding-left: 1em;
-        margin: 0;
-      }
-      nav.navigation-menu ul li {
-        margin-bottom: 1.5em;
-      }
-      nav.navigation-menu ul a {
-        color: #0d73c6;
-        text-decoration: none;
-        font-size: 1.2em;
-        font-weight: bold;
-        transition: color 0.2s;
-      }
-      nav.navigation-menu ul a:hover {
-        color: #ff0000;
-        text-decoration: underline;
-      }
-      nav.navigation-menu.is-active {
-        transform: translateX(0);
-      }
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0,0,0,0.3);
-        z-index: 150;
-        display: none;
-      }
-      .overlay.is-active {
-        display: block;
-      }
-      .castle-title {
-        font-size: 1.5em;
-        align-items: left;
-        font-weight: bold;
-        background: linear-gradient(90deg, #a3d8f4 0%, #d0f0ff 100%);
-        color: #333;
-        padding: 0.3em 0.8em;
-        border-radius: 12px;
-        margin-bottom: 0.7em;
-        display: inline-block;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      }
-      .headline-box {
-        display: flex;
-        align-items: center;
-        background: #e6f7ff;
-        padding: 0.8em 1em;
-        margin: 1.2em 0 1.2em 0;
-        border-radius: 0.5em;
-        font-size: 0.8em;
-        font-weight: bold;
-        width: 100%;
-        box-sizing: border-box;
-      }
-      .headline-bar {
-        display: inline-block;
-        width: 8px;
-        height: 1.5em;
-        background: #1565c0;
-        margin-right: 0.7em;
-        border-radius: 2px;
-      }
-      .headline-text {
-        color: #222;
-        letter-spacing: 0.05em;
-      }
-      .header-logo-area {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        min-width: 0;
-      }
-      .header-logo-img {
-        height: auto;
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
-        object-fit: contain;
-        display: block;
-        margin-left: 0.01em;
-      }
-    </style>
+    <title>岐阜城 | 観光ナビ</title>
+    <link rel="stylesheet" type="text/css" href="../common/article.css">
 </head>
 <body>
-<header style="display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 100;">
-  <button class="hamburger-menu" id="hamburger-menu" style="z-index: 101; margin-left:0.5em; margin-right:1em;">
+<header>
+  <button class="hamburger-menu">
     <span class="hamburger-menu__line"></span>
     <span class="hamburger-menu__line"></span>
     <span class="hamburger-menu__line"></span>
   </button>
-  <div class="header-logo-area">
-    <img src="images/guidebar0123.png" class="header-logo-img" alt="ガイドバー">
+  <div class="header-logo">
+    <img src="image/guidebar0123.png" alt="ガイドバー">
   </div>
 </header>
 <nav class="navigation-menu" id="navigation-menu">
@@ -273,35 +22,29 @@ address { text-align: right }
     <li><a href="../index.html">トップ</a></li>
     <li><a href="../kyoto/index.html">京都府</a></li>
     <li><a href="../miyazaki/index.html">宮崎県</a></li>
-    <li><a href="../gifu/otameshi2.html">岐阜県</a></li>
+    <li><a href="../gifu/index.html">岐阜県</a></li>
   </ul>
 </nav>
-<div class="overlay" id="overlay"></div>
+<div class="overlay"></div>
 <article>
-  <section>
-    <div>
-      <section>
-        <left><h1 class="castle-title">岐阜城</h1></left>
-        <center>
-            <figure>
-              <img src="images/gifujyou2.jpg" alt="岐阜城" width="800" style="max-width: 100%;">
-            </figure>
-        </center>
-            <p>標高329ｍ（国土地理院の三角点設置箇所）の金華山は、岐阜市の中心部に位置し、かつては稲葉山と呼ばれていました。山頂には斎藤道三公・織田信長公ゆかりの岐阜城がそびえ立ち、長良川と同様に岐阜市のシンボル的存在です。金華山にはロープウェーがあり、気軽に山頂までいくことができます。また、登山道も整備されており、気軽にハイキングを楽しむことができます。</p>
-            <h3 class="headline-box">
-              <span class="headline-bar"></span>
-              <span class="headline-text">基本情報</span>
-            </h3>
-            <p>住所: 岐阜県岐阜市金華山天守閣18</p>
-            <p>アクセス: JR岐阜駅（11・12・13番乗り場）または名鉄岐阜駅（4番乗り場）からＮ系統（長良橋方面）及び市内ループ左回りバスで約15分「岐阜公園・歴史博物館前」下車 徒歩3分で岐阜公園（岐阜城へは公園内金華山ロープウェー（4分）→ 徒歩8分 ）</p>
-            <p>開館時間: 3月16日～10月16日/午前9時30分～午後5時30分,10月17日～3月15日/午前9時30分～午後4時30分</p>
-            <p>料金: 大人(16歳以上)200円,小人(4歳以上16歳未満)100円</p>
-            <p>公式サイト: <a href="https://www.city.gifu.lg.jp/kankoubunka/kankou/1013051/1005097/1005098.html">https://www.city.gifu.lg.jp/kankoubunka/kankou/1013051/1005097/1005098.html</a></p>
-      </section>
-    </div>
-  </section>
+  <h1 class="title">岐阜城</h1>
+  <center>
+    <figure>
+      <img src="image/gifujyou2.jpg" alt="岐阜城" width="800" style="max-width: 100%;">
+    </figure>
+  </center>
+  <p>標高329ｍ（国土地理院の三角点設置箇所）の金華山は、岐阜市の中心部に位置し、かつては稲葉山と呼ばれていまし頂には斎藤道三公・織田信長公ゆかりの岐阜城がそびえ立ち、長良川と同様に岐阜市のシンボル的存在です。金華山にはロェーがあり、気軽に山頂までいくことができます。また、登山道も整備されており、気軽にハイキングを楽しむことができ</p>
+  <h3 class="headline-box">
+    <span class="headline-bar"></span>
+    <span class="headline-text">基本情報</span>
+  </h3>
+  <p>住所: 岐阜県岐阜市金華山天守閣18</p>
+  <p>アクセス: JR岐阜駅（11・12・13番乗り場）または名鉄岐阜駅（4番乗り場）からＮ系統（長良橋方面）及び市内ルーりバスで約15分「岐阜公園・歴史博物館前」下車 徒歩3分で岐阜公園（岐阜城へは公園内金華山ロープウェー（4分）→ 分 ）</p>
+  <p>開館時間: 3月16日～10月16日/午前9時30分～午後5時30分,10月17日～3月15日/午前9時30分～午後4時30分</p>
+  <p>料金: 大人(16歳以上)200円,小人(4歳以上16歳未満)100円</p>
+  <p>公式サイト: <a href="https://www.city.gifu.lg.jp/kankoubunka/kankou/1013051/1005097/10050html">https://www.city.gifu.lg.jp/kankoubunka/kankou/1013051/1005097/1005098.html</a></p>
 </article>
 <footer><address>Computer Literacy</address></footer>
-<script src="javascript/menu.js"></script>
+<script src="../common/menu.js"></script>
 </body>
 </html>
