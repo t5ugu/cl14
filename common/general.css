@@ -9,7 +9,7 @@
 
 header {
     grid-area: a;
-    background: rgb(167, 215, 220);
+    background: rgb(214, 251, 255);
     padding: 0.5em 1em;
     display: flex;
     align-items: center;
@@ -67,4 +67,17 @@ address {
     object-fit: contain;
     display: block;
     margin-left: 0.01em;
+}
+
+h1 {
+    height: 134px;
+    width: 1024px;
+    font-size: 4em;
+    text-align: center;
+    margin: 0;
+
+    background-image: url("https://www.hankyu-travel.com/attending/guide/chubu_hokuriku/images/h2-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
